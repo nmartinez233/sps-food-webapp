@@ -5,8 +5,7 @@
 body {
      background-image: url("images/hands.png");
      background-size: cover;
-     color: white;
- }
+}
 
 #content {
   margin-left: auto;
