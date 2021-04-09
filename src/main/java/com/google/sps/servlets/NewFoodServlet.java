@@ -35,8 +35,8 @@ public class NewTaskServlet extends HttpServlet {
             .set("address", address)
             .set("info", info)
             .build();
-    datastore.put(taskEntity);
+    datastore.put(foodEntity);
 
-    response.sendRedirect("/index.html");
+    response.sendRedirect("/food.html");
   }
 }
