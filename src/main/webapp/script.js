@@ -79,4 +79,25 @@ function translate_spanish() {
           .then(response => response.text())
           .then((translatedMessage) => 
           {resultContainer.innerText = translatedMessage;});
-      }
+}
+
+async function loadFoodEntries() {
+    const serverResponse = await fetch("/load-food");
+
+    const responseJson = await serverResponse.json();
+
+    const container = document.getElementById('food-entries');
+
+    container.textContent = '';
+
+    for (i = 0; i < Object.keys(responseJson).length; i++) {
+        container.appendChild(createFoodElement(responseJson[i]));
+    }
+}
+
+function createFoodElement(food) {
+    const foodElement = document.createElement('li');
+    //foodElement.className = 'class';
+    foodElement.innerText = food;
+    return foodElement;
+}
