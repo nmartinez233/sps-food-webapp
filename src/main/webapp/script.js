@@ -81,10 +81,19 @@ function translate_spanish() {
           {resultContainer.innerText = translatedMessage;});
 }
 
-async function loadFoodEntries() {
-    const serverResponse = await fetch("/load-food");
+function loadFromCities(selectedCity) {
+    window.location.href = "food.html";
+    document.getElementById(city-input).value = selectedCity;
+}
+
+async function loadFoodEntries(selectedCity) {
+    const servlet = "/load-" + selectedCity;
+
+    const serverResponse = await fetch(servlet);
 
     const responseJson = await serverResponse.json();
+
+    document.getElementById('city-container').textContent = "You're looking at the options in " + selectedCity;
 
     const container = document.getElementById('food-entries');
 

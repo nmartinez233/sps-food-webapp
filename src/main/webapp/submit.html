@@ -7,23 +7,35 @@
     <script src="script.js"></script>
   </head>
   <body>
-    <div class="navbar">
+    <div id="navbar">
             <a href="index.html">Home Page</a>
-            <a href="cities.html">Find Food!</a>
-            <a href="#submit">Submit Food!</a>
+            <a href="cities.html">Cities</a>
+            <a href="food.html">Find Food!</a>
+            <a href="submit.html">Submit Food!</a>
             <a href="contact.html">Contact Us!</a>
     </div>
-    <div>
+    <div id="content">
         <p>Help other people find food! Please fill out the following form.</p>
         <form action="/new-food" method="POST">
           <p>When?</p>
-          <input type="date" id="date-input" name="date-input"><br><br>
-          <input type="time" id="time-input" name="time-input"><br><br>
+          <label for="date-input">Date: </label>
+          <input type="date" id="date-input" name="date-input" required><br><br>
+          <label for="time-input">Time: </label>
+          <input type="time" id="time-input" name="time-input" required><br><br>
           <p>Where?</p>
-          <input type="text" id="address-input" name="address-input"><br><br>
+          <label for="city-input">City: </label>
+            <select name="city-input" id="city-input" required>
+                <option value="" selected disabled hidden>Choose here</option>
+                <option value="Chicago">Chicago</option>
+                <option value="Houston">Houston</option>
+                <option value="Los Angeles">Los Angeles</option>
+                <option value="New York City">New York City</option>
+            </select><br><br>
+            <label for="address-input">Address: </label>
+          <input type="text" id="address-input" name="address-input" required><br><br>
           <p>Any additional information?</p>
-          <input type="text" id="info-input" name="info-input"><br><br>
-          <input type="submit" />
+          <input type="text" id="info-input" name="info-input"><br><br><br>
+          <input class="button" type="submit" />
         </form>
     </div>
   </body>

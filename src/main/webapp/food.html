@@ -6,15 +6,24 @@
     <link rel="stylesheet" href="style.css">
     <script src="script.js"></script>
   </head>
-  <body onload="loadFoodEntries()">
-    <div class="navbar">
-            <a href="#cities">Cities</a>
+  <body>
+    <div id="navbar">
+            <a href="index.html">Home Page</a>
+            <a href="cities.html">Cities</a>
             <a href="food.html">Find Food!</a>
             <a href="submit.html">Submit Food!</a>
             <a href="contact.html">Contact Us!</a>
     </div>
-    <div>
-        <p>Here are some places where you could find food right now.</p>
+    <div id="content">
+        <p>Hungry? Choose a city to see the available options for you there.</p>
+        <select class="button" name="city-input" id="city-input" onchange="loadFoodEntries(this.value)">
+            <option value="" selected disabled hidden>Choose here</option>
+            <option value="Chicago">Chicago</option>
+            <option value="Houston">Houston</option>
+            <option value="LosAngeles">Los Angeles</option>
+            <option value="NewYorkCity">New York City</option>
+        </select><br><br>
+        <div id="city-container"></div>
         <ul id="food-entries"></ul>
     </div>
   </body>
