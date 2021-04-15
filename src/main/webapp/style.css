@@ -1,5 +1,6 @@
 * {
     box-sizing: border-box;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
 body {
@@ -22,8 +23,17 @@ div {
     padding: 1em;
 }
 
+#city-container, li, label {
+    font-size: 22px;
+}
+
+.city-text {
+    font-weight: bold;
+    font-size: 32px;
+}
+
 #webpage-name {
-    font-size: 40px;
+    font-size: 90px;
 }
 
 #content {
@@ -51,8 +61,25 @@ div {
     "g3 g4";
 }
 
+.food {
+    grid-template-columns: 1fr 2fr;
+    grid-template-areas:
+    "g1 g2";       
+}
+
+.submission {
+    grid-template-columns: 3fr 2fr;
+    grid-template-areas:
+    "g1 g2";
+}
+
 #g1 {
     grid-area: g1;
+}
+
+#title-text {
+    grid-area: g1;
+    justify-content: space-between;
 }
 
 #g2 {
