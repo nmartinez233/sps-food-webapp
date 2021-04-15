@@ -10,16 +10,16 @@
     <div id="navbar">
             <a href="index.html">Home Page</a>
             <a href="cities.html">Cities</a>
-            <a href="food.html">Find Food!</a>
-            <a href="submit.html">Submit Food!</a>
-            <a href="contact.html">Contact Us!</a>
+            <a href="food.html">Find Food</a>
+            <a href="submit.html">Submit Food</a>
+            <a href="contact.html">Contact Us</a>
     </div>
     <div id="content">
         <div class="grd submission">
             <div id="g1">
                 <h2>Help other people find food!</h2>
                 <p>Please fill out the following form.</p>
-                <form action="/new-food" method="POST">
+                <form action="/new-food" method="POST" onSubmit="showAlert('Submission received!');">
                 <p>When?</p>
                 <label for="date-input">Date: </label>
                 <input type="date" id="date-input" name="date-input" required><br><br>

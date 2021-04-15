@@ -110,3 +110,7 @@ function createFoodElement(food) {
     foodElement.innerText = food;
     return foodElement;
 }
+
+function showAlert(message) {
+    alert(message);
+}
