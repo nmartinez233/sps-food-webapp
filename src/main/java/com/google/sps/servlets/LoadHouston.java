@@ -15,14 +15,14 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 /** Servlet responsible for listing food from all cities */
-@WebServlet("/load-food")
-public class LoadFoodServlet extends HttpServlet {
+@WebServlet("/load-Houston")
+public class LoadHouston extends HttpServlet {
 
   @Override
   public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
     Datastore datastore = DatastoreOptions.getDefaultInstance().getService();
     Query<Entity> query =
-        Query.newEntityQueryBuilder().setKind("Food").setOrderBy(OrderBy.desc("date")).build();
+        Query.newEntityQueryBuilder().setKind("Houston").setOrderBy(OrderBy.desc("date")).build();
     QueryResults<Entity> results = datastore.run(query);
 
     ArrayList<String> entries = new ArrayList<>();

@@ -6,11 +6,82 @@ body {
     background-size: cover;
 }
 
+p {
+  font-size: 28px;
+}
+
+h2 {
+  font-size: 40px;
+}
+
+h3 {
+  font-size: 32px;
+}
+
+div {
+    padding: 1em;
+}
+
+#webpage-name {
+    font-size: 40px;
+}
+
 #content {
   margin-left: auto;
   margin-right: auto;
   width: 1300px;
   padding: 125px 0px;
+}
+
+.grd {
+    display: grid;
+}
+
+.index {
+    grid-template-columns: 1fr 2fr;
+    grid-template-areas:
+    "g1 g2";       
+}
+
+.cities {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas:
+    "g1 g2"
+    "g3 g4";
+}
+
+#g1 {
+    grid-area: g1;
+}
+
+#g2 {
+    grid-area: g2;
+}
+
+.i1 {
+    grid-area: g1;
+}
+
+.i2 {
+    grid-area: g2;
+}
+
+.i3 {
+    grid-area: g3;
+}
+
+.i4 {
+    grid-area: g4;
+}
+
+#content img {
+    border-radius: 25px;
+}
+
+#veggies {
+    height: 100%;
+    width: 100%;
 }
 
 .column {
@@ -44,6 +115,7 @@ body {
 }
 
 #navbar {
+  padding: 0;
   overflow: hidden;
   background-color: rgb(71, 182, 126);
   position: fixed;
@@ -67,4 +139,30 @@ body {
 #navbar a:hover {
   background: rgb(133, 207, 170);
   color: white;
+}
+
+.button {
+  background-color: rgb(71, 182, 126);
+  border: none;
+  border-radius: 5px;
+  color: white;
+  padding: 16px 38px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 22px;
+  transition-duration: 0.2s;
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: rgb(133, 207, 170);
+  border: none;
+  border-radius: 5px;
+  color: white;
+  padding: 16px 38px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 22px;
 }

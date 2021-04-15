@@ -1,4 +1,4 @@
-package com.google.sps.servlets;
+package main.java.com.google.sps.servlets;
 
 import com.google.cloud.datastore.Datastore;
 import com.google.cloud.datastore.DatastoreOptions;
@@ -23,20 +23,22 @@ public class NewFoodServlet extends HttpServlet {
     // Get the value entered in the form.
     String date = request.getParameter("date-input");
     String time = request.getParameter("time-input");
+    String city = request.getParameter("city-input");
     String address = request.getParameter("address-input");
     String info = request.getParameter("info-input");
 
     Datastore datastore = DatastoreOptions.getDefaultInstance().getService();
-    KeyFactory keyFactory = datastore.newKeyFactory().setKind("Food");
+    KeyFactory keyFactory = datastore.newKeyFactory().setKind(city);
     FullEntity foodEntity =
         Entity.newBuilder(keyFactory.newKey())
             .set("date", date)
             .set("time", time)
+            .set("city", city)
             .set("address", address)
             .set("info", info)
             .build();
     datastore.put(foodEntity);
 
-    response.sendRedirect("/food.html");
+    response.sendRedirect("/submit.html");
   }
 }
