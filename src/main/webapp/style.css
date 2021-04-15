@@ -9,9 +9,8 @@ body {
 #content {
   margin-left: auto;
   margin-right: auto;
-  margin-top: 50px;
-  width: 650px;
-  
+  width: 1300px;
+  padding: 125px 0px;
 }
 
 .column {
