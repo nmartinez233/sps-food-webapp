@@ -1,9 +1,9 @@
 * {
-  box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 body {
-     background-size: cover;
+    background-size: cover;
 }
 
 #content {
@@ -44,25 +44,28 @@ body {
   transform: translate(-50%, -50%);
 }
 
- .navbar {
+#navbar {
   overflow: hidden;
-  background-color: rgba(0, 0, 0, 0);
-  top: 0; /* Position the navbar at the top of the page */
-  width: 100%; /* Full width */
+  background-color: black;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
 }
 
-/* Links inside the navbar */
-.navbar a {
+#navbar a {
   float: left;
   display: block;
-  color: #000000;
+  color: white;
   text-align: center;
-  padding: 14px 16px;
+  padding: 20px 32px;
   text-decoration: none;
+  font-size: 17px;
+  transition-duration: 0.2s;
+  font-size: 25px;
 }
 
-/* Change background on mouse-over */
-.navbar a:hover {
-  background: #ddd;
-  color: black;
+#navbar a:hover {
+  background: rgb(51, 51, 51);
+  color: white;
 }
